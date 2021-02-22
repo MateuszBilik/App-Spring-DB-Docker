@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql:latest
+    container_name: hwa
+    environment:
+      - MYSQL_ROOT_PASSWORD=toor
+      - MYSQL_DATABASE=hwa
+    ports:
+      - 3306:3306
+    restart: on-failure
+
+  hw4:
+    image: mateusz-exchange
+    container_name: mateusz-exchange
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8085:8085
+    restart: on-failure
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/hwa
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: toor

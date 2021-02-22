@@ -1,0 +1,40 @@
+[21:18:38] 
+Hello,
+Welcome in this app!
+You can always quit the app by writing "exit".
+Please, give your file name which you would like to work with:
+ 
+[21:18:43] 
+File found. 
+[21:18:44] 
+What do you want to do with file?
+If you don't know, write "help"
+ 
+[21:18:48] 
+help 
+[21:18:48] 
+List of commends:
+ - get <high/low/open/close> yyyy.mm.dd hh:mm (choose one type)
+ - get <high/low/open/close> yyyy.mm.dd hh (choose one type)
+ - get <high/low/open/close> yyyy.mm.dd (choose one type)
+ - get yyyy.mm.dd hh:mm
+ - get yyyy.mm.dd hh
+ - get yyyy.mm.dd
+ - volatility yyyy.mm.dd hh:mm
+ - volatility yyyy.mm.dd hh
+ - volatility yyyy.mm.dd
+ - most_volatile_day
+ - most_volatile_hour
+ - average_minutely_volatility
+ - average_hourly_volatility
+ - average_daily_volatility
+
+ for example: get 2020.11.02 13:55
+ for example: get low 2020.11.02 13:55
+ 
+[21:18:48] 
+0.01678 
+[21:18:58] 
+average_hourly_volatility 
+[21:19:00] 
+0.00144 
